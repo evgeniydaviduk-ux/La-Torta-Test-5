@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: latorta-assistant-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m app.main
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
+      - key: MANAGER_CHAT_ID
+        sync: false
+      - key: MANAGER_USERNAME
+        value: byviktoriia_a
+      - key: SITE_URL
+        value: https://la-torta.ua/ua/
+      - key: MAX_CATEGORY_PAGES
+        value: "350"
+      - key: MAX_PRODUCTS
+        value: "2500"
+      - key: CATALOG_REFRESH_HOURS
+        value: "12"
+      - key: START_CATALOG_REFRESH
+        value: "true"

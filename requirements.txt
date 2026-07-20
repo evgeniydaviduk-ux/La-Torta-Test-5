@@ -1,0 +1,9 @@
+aiogram==3.20.0.post0
+aiohttp==3.11.18
+aiosqlite==0.21.0
+beautifulsoup4==4.13.4
+curl_cffi==0.11.1
+lxml==5.4.0
+openai==1.82.0
+python-dotenv==1.1.0
+rapidfuzz==3.13.0
